@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
@@ -26,7 +27,7 @@ public class ListUtilTest {
 		System.out.println(">> " + name.getMethodName() + " ---------");
 		
 		// arrange
-		List<String> lst = new ArrayList<>() ;
+		List<String> lst = new ArrayList<String>() ;
 		{
 			//  value
 			//  set
@@ -45,5 +46,33 @@ public class ListUtilTest {
 		// assert
 		//fail("Not yet implemented");
 	}
+	
+	@Ignore
+	public void testSqueese() {
+		
+		System.out.println("//---------------------------------------------------");
+		System.out.println(">> " + name.getMethodName() + " ---------");
+		
+		// arrange
+		List<String> lst = new ArrayList<String>() ;
+		{
+			//  value
+			//  set
+			lst.add("sakai");
+			lst.add(null);
+			lst.add("abe");
+			lst.add("shinosuke");
+			lst.add(null);
+		}
+		
+		// act
+		@SuppressWarnings("unchecked")
+		List<String> actual = (List<String>)ListUtil.squeeze(lst);
+		System.out.println(ListUtil.dump(actual));
+		
+		// assert
+		//fail("Not yet implemented");
+	}
+
 
 }

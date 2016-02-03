@@ -1,5 +1,6 @@
 package org.rock.util;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.commons.lang.ArrayUtils;
@@ -7,16 +8,17 @@ import org.apache.commons.lang.ArrayUtils;
 public class ListUtil {
 	
 	/**
-	 * squeeze empty elements in list
+	 * squeeze null from list
 	 * @param lst
-	 * @return readable string bump
+	 * @return
 	 */
-//	static public List<? extends Object> squeezeEmpty(List<? extends Object> lst){
-//		
-//		
-//		
-//		return ArrayUtils.toString(lst.htoArray());
-//	}
+	static public List<? extends Object> squeeze(List<? extends Object> lst){
+		
+		lst.removeAll(Collections.singleton(null));
+		
+		return lst;
+	}
+	
 	/**
 	 * list bump for debug
 	 * @param lst
@@ -25,5 +27,6 @@ public class ListUtil {
 	static public String dump(List<? extends Object> lst){
 		return ArrayUtils.toString(lst.toArray());
 	}
+	
 
 }
