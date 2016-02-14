@@ -23,11 +23,12 @@ public class MapUtil {
 	 * @param aryKeys
 	 * @param aryValues
 	 * @return
+	 * FIXME Map<String,Object>�ł̕ԋp
 	 * @throws IllegalArgumentException
 	 */
-	static public Map<String,Object> toMapByHorizonArray(String[] aryKeys,Object[] aryValues)
+	static public Map<String,String> toMapByHorizonArray(String[] aryKeys,String[] aryValues)
 			throws IllegalArgumentException {
-		Map<String,Object> retMap = new HashMap<>();
+		Map<String,String> retMap = new HashMap<>();
 		
 		int lengthkeys = aryKeys.length;
 		int lengthValues = aryValues.length;

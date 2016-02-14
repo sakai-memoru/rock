@@ -40,6 +40,7 @@ public class BeanUtil {
 		return ReflectionToStringBuilder.toString(bean);
 	}
 	
+
 	
 	
 	

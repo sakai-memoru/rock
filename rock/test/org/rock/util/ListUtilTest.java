@@ -27,7 +27,7 @@ public class ListUtilTest {
 		System.out.println(">> " + name.getMethodName() + " ---------");
 		
 		// arrange
-		List<String> lst = new ArrayList<String>() ;
+		List<String> lst = new ArrayList<>() ;
 		{
 			//  value
 			//  set
@@ -47,14 +47,14 @@ public class ListUtilTest {
 		//fail("Not yet implemented");
 	}
 	
-	@Ignore
+	@Test
 	public void testSqueese() {
 		
 		System.out.println("//---------------------------------------------------");
 		System.out.println(">> " + name.getMethodName() + " ---------");
 		
 		// arrange
-		List<String> lst = new ArrayList<String>() ;
+		List<String> lst = new ArrayList<>() ;
 		{
 			//  value
 			//  set

@@ -65,19 +65,19 @@ public class MapUtilTest {
 					,"createdDate"
 					,"updatedDate"
 					};
-			Object[] aryValues = new Object[] {
-				 	 Long.valueOf(1234L)
+			String[] aryValues = new String[] {
+				 	 Long.valueOf(1234L).toString()
 					,"abe"
 					,"shinosuke"
 					,"0"
 					,"33"
 					,"A"
-					,DateUtils.parseDate("2016/02/02", "yyyy/MM/dd")
-					,ObjectUtils.NULL
+					,DateUtils.parseDate("2016/02/02", "yyyy/MM/dd").toString()
+					,ObjectUtils.NULL.toString()
 					};
 			
 			// act
-			Map<String,Object> map = MapUtil.toMapByHorizonArray(aryKeys, aryValues);
+			Map<String,String> map = MapUtil.toMapByHorizonArray(aryKeys, aryValues);
 			System.out.println(map.toString());
 			
 			// assert

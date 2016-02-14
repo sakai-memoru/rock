@@ -13,9 +13,7 @@ public class ListUtil {
 	 * @return
 	 */
 	static public List<? extends Object> squeeze(List<? extends Object> lst){
-		
-		lst.removeAll(Collections.singleton(null));
-		
+		lst.removeAll(Collections.singleton(null)); //null‚ðŠi”[‚·‚éset‚Åremove
 		return lst;
 	}
 	
